@@ -62,12 +62,6 @@ new class extends Component
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <!-- Authentication -->
-                        <button wire:click="logout" class="w-full text-start">
-                            <x-dropdown-link>
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-
                         <x-dropdown-link :href="route('wishlist')" wire:navigate>
                             {{ __('Wishlist') }}
                         </x-dropdown-link>
@@ -75,6 +69,12 @@ new class extends Component
                         <x-dropdown-link :href="route('orders')" wire:navigate>
                             {{ __('Orders') }}
                         </x-dropdown-link>
+
+                        <!-- Authentication -->
+                        <button wire:click="logout" class="w-full text-start">
+                            <x-dropdown-link>
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
                         </button>
                     </x-slot>
                 </x-dropdown>

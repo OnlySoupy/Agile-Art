@@ -21,7 +21,7 @@ class Product extends Model implements StockInterface
      * This Model should be (m)odular - everything it can do/needs to do should be located in it's own file.
      */
 
-    protected $fillable = ['name', 'seller', 'description', 'price', 'stock'];
+    protected $fillable = ['name', 'seller', 'genre', 'description', 'price', 'stock'];
 
     //Public function to check stock
     public function hasStock(): bool 
