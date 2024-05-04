@@ -19,4 +19,20 @@ Route::view('cart', 'cart')
     ->middleware(['auth']) // Requirement - user must be authenticated to access the cart.
     ->name('cart');
 
+Route::view('notifications', 'notifications')
+    ->middleware(['auth'])
+    ->name('notifications');
+
+Route::view('messages', 'messages')
+    ->middleware(['auth'])
+    ->name('messages');
+
+Route::view('wishlist', 'wishlist')
+    ->middleware(['auth'])
+    ->name('wishlist');
+
+Route::view('orders', 'orders')
+    ->middleware(['auth'])
+    ->name('orders');
+
 require __DIR__.'/auth.php';

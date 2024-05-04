@@ -33,6 +33,12 @@ new class extends Component
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('notifications')" :active="request()->routeIs('notifications')" wire:navigate>
+                        {{ __('Notifications') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('messages')" :active="request()->routeIs('messages')" wire:navigate>
+                        {{ __('Messages') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -61,6 +67,14 @@ new class extends Component
                             <x-dropdown-link>
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('wishlist')" wire:navigate>
+                            {{ __('Wishlist') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('orders')" wire:navigate>
+                            {{ __('Orders') }}
+                        </x-dropdown-link>
                         </button>
                     </x-slot>
                 </x-dropdown>
