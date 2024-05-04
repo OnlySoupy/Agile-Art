@@ -14,11 +14,12 @@ Route::view('profile', 'profile')
     ->middleware(['auth']) // Requirement - user must be authenticated to access the cart.
     ->name('profile');
 
-// Route for cart
+// Route for Cart
 Route::view('cart', 'cart')
     ->middleware(['auth']) // Requirement - user must be authenticated to access the cart.
     ->name('cart');
 
+// Route for Notifications
 Route::view('notifications', 'notifications')
     ->middleware(['auth'])
     ->name('notifications');

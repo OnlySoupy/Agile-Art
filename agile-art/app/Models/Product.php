@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Interfaces\StockInterface;
+use App\Traits\IsPurchasable;
 
 class Product extends Model implements StockInterface
 {
-    use HasFactory;
+    use HasFactory, IsPurchasable;
 
     /**
      * Attributes for any product used site-wide
