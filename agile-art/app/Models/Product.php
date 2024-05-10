@@ -11,16 +11,6 @@ class Product extends Model implements StockInterface
 {
     use HasFactory, IsPurchasable;
 
-    /**
-     * Attributes for any product used site-wide
-     * 
-     * Keep in mind these should adhere to CALM methodology!
-     * This Model should be (c)oncise - it should be abundantly clear what this Model is/isn't and what it can/cannot do.
-     * This Model should be (a)gile - it should be able to de deployed quickly and scaled even more quickly.
-     * This Model should be (l)oose - it can exist on its own (decoupled) or can be grouped together.
-     * This Model should be (m)odular - everything it can do/needs to do should be located in it's own file.
-     */
-
     protected $fillable = ['name', 'seller', 'genre', 'description', 'price', 'stock'];
 
     //Public function to check stock
